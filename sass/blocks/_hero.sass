@@ -1,0 +1,101 @@
+.hero
+  padding: 50px 0
+  background-color: $secondary
+  &-block
+    display: flex
+    justify-content: space-between
+  &-text
+    flex-basis: 50%
+    justify-content: space-between
+    &__title
+      font-size: 41px
+      line-height: 55px
+      margin-bottom: 40px
+      +bold
+    &__subtitle
+      +bold
+      font-size: 19px
+      display: inline-block
+      margin-bottom: 65px
+  &__img
+    box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05)
+    
+  &-list
+    margin: 0
+    padding: 0
+    &__item
+      display: flex
+      align-items: center
+      margin-bottom: 25px
+      line-height: 1.5
+      &:last-child
+        margin-bottom: 0
+    &__image
+      min-width: 40px
+      min-height: 40px
+      border: 2px solid $main-color
+      display: block
+      padding: 8px 9px    
+      border-radius: 50%
+      margin-right: 30px
+    &__text
+      min-width: 300px
+      font-size: 14px
+@media (max-width: 1200px)
+  .hero
+    &-block
+      flex-direction: column
+    &-list
+      margin-bottom: 45px
+    &-text
+      padding-left: 10px
+      text-align: center
+    &-list
+      &__item
+        justify-content: center
+        text-align: left
+    &-image
+      display: flex
+      justify-content: center
+@media (max-width: 768px)
+  .hero
+    &__img
+      height: 402px
+    &-text
+      &__title
+        font-size: 24px
+        line-height: 1.4
+        margin-bottom: 15px
+      &__subtitle
+        font-size: 16px
+        margin-bottom: 28px
+    &-list
+      &__item
+        margin-bottom: 20px
+      &__text
+        font-size: 12px
+      &__image
+        margin-right: 15px
+
+@media (max-width: 360px)
+  .hero
+    &-list
+      &__text
+        min-width: 200px
+      &__item
+        justify-content: flex-start
+@media (max-width: 320px)
+  .hero
+    padding: 40px 0
+    &-text
+      text-align: left
+      padding-left: 0
+      &__title
+        margin: 0
+    &-list
+      &__text
+        min-width: 200px
+      &__item
+        justify-content: flex-start
+    &__img
+      height: 272px
